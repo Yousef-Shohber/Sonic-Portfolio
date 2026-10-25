@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sonic-portfolio-henna.vercel.app/sitemap.xml

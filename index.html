@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yousef Shohber — Backend Developer (Node.js &amp; NestJS)</title>
+  <meta name="description"
+    content="Backend developer building secure REST APIs with Node.js, TypeScript and NestJS: authentication, PostgreSQL and MongoDB, Redis, background queues, real-time updates and concurrency-safe booking logic.">
+  <meta name="author" content="Yousef Shohber">
+  <meta name="keywords"
+    content="backend developer, Node.js, NestJS, TypeScript, REST API, PostgreSQL, MongoDB, Redis, BullMQ, Egypt">
+  <meta name="theme-color" content="#0c0c0b">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sonic-portfolio-henna.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sonic-portfolio-henna.vercel.app/">
+  <meta property="og:site_name" content="Yousef Shohber">
+  <meta property="og:title" content="Yousef Shohber — Backend Developer (Node.js &amp; NestJS)">
+  <meta property="og:description"
+    content="Backend developer building secure REST APIs with Node.js, TypeScript and NestJS: authentication, PostgreSQL and MongoDB, Redis, background queues, real-time updates and concurrency-safe booking logic.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Yousef Shohber — Backend Developer (Node.js &amp; NestJS)">
+  <meta name="twitter:description"
+    content="Backend developer building secure REST APIs with Node.js, TypeScript and NestJS: authentication, PostgreSQL and MongoDB, Redis, background queues, real-time updates and concurrency-safe booking logic.">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.add("js")</script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a href="#main"
+    class="sr-only z-[60] rounded bg-signal px-4 py-2 font-medium text-ink focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip
+    to content</a>
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-line bg-ink/85 backdrop-blur-md">
+    <div class="mx-auto flex h-16 max-w-[1320px] items-center justify-between px-5 sm:px-8 lg:px-12">
+      <a href="#top" class="flex items-baseline gap-2" data-close-menu><span
+          class="font-serif text-2xl italic leading-none">Yousef Shohber</span><span
+          class="eyebrow hidden sm:inline">Backend</span></a>
+      <nav aria-label="Primary" class="hidden items-center gap-8 lg:flex">
+        <a href="#work" data-nav class="text-sm transition-colors hover:text-bone text-mute">Work<span
+            aria-hidden="true" class="mt-0.5 block h-px bg-signal transition-all w-0"></span></a>
+        <a href="#expertise" data-nav class="text-sm transition-colors hover:text-bone text-mute">Expertise<span
+            aria-hidden="true" class="mt-0.5 block h-px bg-signal transition-all w-0"></span></a>
+        <a href="#about" data-nav class="text-sm transition-colors hover:text-bone text-mute">About<span
+            aria-hidden="true" class="mt-0.5 block h-px bg-signal transition-all w-0"></span></a>
+        <a href="#learning" data-nav class="text-sm transition-colors hover:text-bone text-mute">Learning<span
+            aria-hidden="true" class="mt-0.5 block h-px bg-signal transition-all w-0"></span></a>
+        <a href="#contact" data-nav class="text-sm transition-colors hover:text-bone text-mute">Contact<span
+            aria-hidden="true" class="mt-0.5 block h-px bg-signal transition-all w-0"></span></a>
+        <a href="/files/Yousef-Shohber-CV.pdf" download
+          class="rounded-full border border-line-strong px-4 py-1.5 text-sm transition-colors hover:border-signal hover:text-signal">Download
+          CV</a>
+      </nav>
+      <button type="button" id="menu-btn"
+        class="-mr-2 inline-flex size-10 items-center justify-center rounded-full lg:hidden" aria-expanded="false"
+        aria-controls="mobile-menu" aria-label="Open menu">
+        <span data-icon-open><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 5h16" />
+            <path d="M4 12h16" />
+            <path d="M4 19h16" />
+          </svg></span><span data-icon-close hidden><svg class="size-5" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg></span>
+      </button>
+    </div>
+    <div id="mobile-menu" hidden
+      class="absolute inset-x-0 top-16 h-[calc(100dvh-4rem)] overflow-y-auto border-t border-line bg-ink px-5 pb-10 pt-6 lg:hidden">
+      <nav aria-label="Mobile">
+        <ul>
+          <li class="border-b border-line"><a href="#work" data-close-menu
+              class="flex items-baseline justify-between py-5 font-serif text-4xl">Work<span
+                class="eyebrow">01</span></a></li>
+          <li class="border-b border-line"><a href="#expertise" data-close-menu
+              class="flex items-baseline justify-between py-5 font-serif text-4xl">Expertise<span
+                class="eyebrow">02</span></a></li>
+          <li class="border-b border-line"><a href="#about" data-close-menu
+              class="flex items-baseline justify-between py-5 font-serif text-4xl">About<span
+                class="eyebrow">03</span></a></li>
+          <li class="border-b border-line"><a href="#learning" data-close-menu
+              class="flex items-baseline justify-between py-5 font-serif text-4xl">Learning<span
+                class="eyebrow">04</span></a></li>
+          <li class="border-b border-line"><a href="#contact" data-close-menu
+              class="flex items-baseline justify-between py-5 font-serif text-4xl">Contact<span
+                class="eyebrow">05</span></a></li>
+        </ul>
+        <a href="/files/Yousef-Shohber-CV.pdf" download
+          class="mt-8 inline-flex rounded-full bg-signal px-6 py-3 font-medium text-ink">Download CV</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section id="top" class="relative overflow-hidden pt-16">
+      <div class="hero-rules pointer-events-none absolute inset-0 mx-auto max-w-[1320px]" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-[1320px] px-5 pb-10 pt-14 sm:px-8 md:pt-20 lg:px-12 lg:pt-24">
+        <div
+          class="grid grid-cols-1 items-start gap-10 md:grid-cols-[minmax(0,1fr)_minmax(220px,0.65fr)] md:gap-6 lg:grid-cols-12 lg:gap-6">
+          <div class="min-w-0 md:col-span-1 lg:col-span-8">
+            <p class="eyebrow rise flex items-start gap-3" style="--d: 0ms"><span
+                class="mt-[0.35em] size-2 shrink-0 rounded-full bg-signal" aria-hidden="true"></span><span
+                class="min-w-0">Open to backend roles, internships and freelance projects</span></p>
+            <h1
+              class="rise mt-8 font-serif text-[3.2rem] leading-[0.94] tracking-[-0.03em] sm:text-[clamp(3.2rem,6vw,6.8rem)]"
+              style="--d: 100ms"><span class="sr-only">Yousef Shohber, Backend Developer: </span>APIs that stay <em
+                class="text-signal">correct</em> when requests collide.</h1>
+            <p class="rise mt-10 max-w-xl text-lg leading-relaxed text-mute" style="--d: 220ms"><strong
+                class="font-medium text-bone">Yousef Shohber</strong> — Backend developer and fourth-year IT student at
+              Zagazig University. I build reliable APIs with Node.js, TypeScript, and NestJS. I focus on secure
+              authentication, transactional data integrity, background jobs, and handling concurrent requests.</p>
+            <div class="rise mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center" style="--d: 320ms">
+              <a href="#work"
+                class="group inline-flex items-center justify-center gap-2 rounded-full bg-signal px-6 py-3 font-medium text-ink transition-transform hover:-translate-y-0.5">See
+                selected work <svg class="size-4 transition-transform group-hover:translate-y-0.5"
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 5v14" />
+                  <path d="m19 12-7 7-7-7" />
+                </svg></a>
+              <a href="/files/Yousef-Shohber-CV.pdf" download
+                class="inline-flex items-center justify-center gap-2 rounded-full border border-line-strong px-6 py-3 transition-colors hover:border-bone"><svg
+                  class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <path d="M12 15V3" />
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <path d="m7 10 5 5 5-5" />
+                </svg> Download CV</a>
+              <a href="mailto:yousefshohber@gmail.com"
+                class="inline-flex items-center justify-center gap-2 rounded-full border border-line-strong px-6 py-3 text-mute transition-colors hover:border-signal hover:text-signal"><svg
+                  class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                </svg> Email me</a>
+            </div>
+          </div>
+          <figure
+            class="rise mx-auto w-full max-w-xs md:col-span-1 md:col-start-2 md:row-start-1 md:max-w-none lg:col-span-4 lg:col-start-9"
+            style="--d: 260ms">
+            <div class="relative aspect-[4/5] w-full overflow-hidden rounded-sm border border-line"><img
+                src="images/yousef.webp" alt="Portrait of Yousef Shohber" width="900" height="900" fetchpriority="high"
+                class="absolute inset-0 size-full object-cover object-[50%_18%] contrast-[1.03] saturate-[0.85]"></div>
+            <figcaption class="eyebrow mt-3 flex flex-wrap justify-between gap-x-4 gap-y-1"><span>Yousef
+                Shohber</span><span>Cairo, Egypt</span></figcaption>
+          </figure>
+        </div>
+        <dl class="mt-16 grid grid-cols-2 border-t border-line lg:mt-20 lg:grid-cols-4">
+          <div class="border-b border-line py-5 pr-4 lg:border-b-0 lg:pr-6">
+            <dt class="eyebrow">Core stack</dt>
+            <dd class="mt-2 text-sm text-bone">Node.js · NestJS · TypeScript</dd>
+          </div>
+          <div class="border-b border-line py-5 pr-4 lg:border-b-0 lg:pr-6">
+            <dt class="eyebrow">Data</dt>
+            <dd class="mt-2 text-sm text-bone">PostgreSQL · MongoDB · Redis</dd>
+          </div>
+          <div class="border-b border-line py-5 pr-4 lg:border-b-0 lg:pr-6">
+            <dt class="eyebrow">Focus</dt>
+            <dd class="mt-2 text-sm text-bone">Auth · concurrency · queues</dd>
+          </div>
+          <div class="border-b border-line py-5 pr-4 lg:border-b-0 lg:pr-6">
+            <dt class="eyebrow">Built</dt>
+            <dd class="mt-2 text-sm text-bone">7 backend projects on GitHub</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+    <section id="work" aria-labelledby="work-title" class="mx-auto max-w-[1320px] px-5 py-24 sm:px-8 md:py-32 lg:px-12">
+      <div class="reveal mb-12 md:mb-16">
+        <div class="flex items-center gap-4"><span class="eyebrow text-signal">01</span><span
+            class="h-px flex-1 bg-line" aria-hidden="true"></span><span class="eyebrow">Selected work</span></div>
+        <div class="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-12">
+          <h2 id="work-title"
+            class="font-serif text-[clamp(2.4rem,5.4vw,4.6rem)] leading-[1] tracking-[-0.02em] lg:col-span-7">Systems
+            built end to end, <em class="text-signal">with the hard parts</em> written down.</h2>
+          <p class="max-w-md text-[0.95rem] leading-relaxed text-mute lg:col-span-4 lg:col-start-9 lg:self-end">Three
+            projects are documented in depth: how they are structured and what they protect against. Four more are
+            listed after them.</p>
+        </div>
+      </div>
+      <div class="space-y-24 md:space-y-32">
+        <article aria-labelledby="propflow-title" class="border-t border-line-strong pt-10">
+          <div class="reveal ">
+            <div class="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
+              <div class="lg:col-span-4">
+                <div id="propflow-title">
+                  <header>
+                    <p class="eyebrow flex items-center gap-3"><span class="text-signal">01</span><span
+                        class="h-px w-8 bg-line-strong" aria-hidden="true"></span>Featured · NestJS</p>
+                    <h3 class="mt-5 font-serif text-[clamp(2.2rem,4.6vw,4rem)] leading-[1] tracking-[-0.02em]">PropFlow
+                    </h3>
+                    <p class="mt-2 text-mute">Property &amp; rental management API</p>
+                  </header>
+                </div>
+                <p class="mt-8 leading-relaxed text-mute">One workflow for the operational lifecycle of rental
+                  properties: properties and units, tenants, lease contracts and maintenance requests, with explicit
+                  roles for tenants, owners, maintenance staff and admins so that data stays consistent and visible to
+                  the right people.</p>
+                <div class="mt-8">
+                  <ul aria-label="Technologies"
+                    class="flex flex-wrap gap-x-3 gap-y-1 font-mono text-xs leading-6 text-mute">
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">NestJS</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">TypeScript</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">PostgreSQL</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">TypeORM</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Redis</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">JWT</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Resource Level Authorization</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Google OAuth</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Zod</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Cloudinary</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Swagger</li>
+                  </ul>
+                </div>
+                <div class="mt-8">
+                  <ul class="flex flex-wrap gap-3">
+                    <li><a href="https://prop-flow-black.vercel.app/api/docs" target="_blank" rel="noopener noreferrer"
+                        class="group inline-flex items-center gap-2 rounded-full border border-line-strong px-4 py-2 text-sm transition-colors hover:border-signal hover:text-signal"><svg
+                          class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          aria-hidden="true">
+                          <path d="M12 7v14" />
+                          <path
+                            d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
+                        </svg>API docs (Swagger)<svg
+                          class="size-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <path d="M7 7h10v10" />
+                          <path d="M7 17 17 7" />
+                        </svg><span class="sr-only">for PropFlow (opens in a new tab)</span></a></li>
+                    <li><a href="https://github.com/Yousef-Shohber/Prop-Flow" target="_blank" rel="noopener noreferrer"
+                        class="group inline-flex items-center gap-2 rounded-full border border-line-strong px-4 py-2 text-sm transition-colors hover:border-signal hover:text-signal"><svg
+                          viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="size-4">
+                          <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg>Source on GitHub<svg
+                          class="size-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <path d="M7 7h10v10" />
+                          <path d="M7 17 17 7" />
+                        </svg><span class="sr-only">for PropFlow (opens in a new tab)</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="lg:col-span-8"><a href="images/propflow-architecture.webp" target="_blank"
+                  rel="noopener noreferrer"
+                  class="group block border border-line transition-colors hover:border-line-strong"><img
+                    src="images/propflow-architecture.webp"
+                    alt="PropFlow architecture overview: clients, NestJS API with global middleware and domain modules, PostgreSQL, Redis, Cloudinary, SMTP and Google OAuth, plus business flow, roles, security, caching and rate limiting."
+                    width="1536" height="1024" loading="lazy" class="h-auto w-full"><span
+                    class="eyebrow flex items-center justify-between border-t border-line px-3 py-2.5 transition-colors group-hover:text-bone">Architecture
+                    overview<span class="inline-flex items-center gap-1">Full size <svg class="size-3.5"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M7 7h10v10" />
+                        <path d="M7 17 17 7" />
+                      </svg><span class="sr-only">(opens in a new tab)</span></span></span></a></div>
+            </div>
+          </div>
+          <div class="mt-14">
+            <p class="eyebrow mb-6">Engineering decisions</p>
+            <dl class="grid grid-cols-1 gap-x-12 gap-y-0 md:grid-cols-2 xl:grid-cols-3">
+              <div class="reveal border-t border-line py-6">
+                <dt class="flex items-baseline gap-3 font-serif text-2xl leading-tight"><span
+                    class="font-mono text-xs text-signal">01</span>Session handling</dt>
+                <dd class="mt-3 text-[0.95rem] leading-relaxed text-mute">Short-lived JWT access tokens and longer-lived
+                  refresh tokens are delivered as httpOnly cookies. Email OTPs for verification and password reset are
+                  held in Redis, and Google OAuth 2.0 is supported alongside email login.</dd>
+              </div>
+              <div class="reveal border-t border-line py-6" style="--rd: 0.06s">
+                <dt class="flex items-baseline gap-3 font-serif text-2xl leading-tight"><span
+                    class="font-mono text-xs text-signal">02</span>Role and resource-level authorization</dt>
+                <dd class="mt-3 text-[0.95rem] leading-relaxed text-mute">Role-based guards separate tenant, owner,
+                  maintenance staff and admin capabilities. On top of roles, resource-level checks make sure owners and
+                  staff only act on the records that belong to them.</dd>
+              </div>
+              <div class="reveal border-t border-line py-6" style="--rd: 0.12s">
+                <dt class="flex items-baseline gap-3 font-serif text-2xl leading-tight"><span
+                    class="font-mono text-xs text-signal">03</span>Redis-backed rate limiting</dt>
+                <dd class="mt-3 text-[0.95rem] leading-relaxed text-mute">Throttling is applied per IP and per user,
+                  with stricter limits on login, token refresh and OTP endpoints than on the general API.</dd>
+              </div>
+              <div class="reveal border-t border-line py-6">
+                <dt class="flex items-baseline gap-3 font-serif text-2xl leading-tight"><span
+                    class="font-mono text-xs text-signal">04</span>Cache-aside reads</dt>
+                <dd class="mt-3 text-[0.95rem] leading-relaxed text-mute">Property, unit and listing reads are cached in
+                  Redis with a short, configurable TTL, and invalidated whenever the underlying records are created,
+                  updated or deleted.</dd>
+              </div>
+              <div class="reveal border-t border-line py-6" style="--rd: 0.06s">
+                <dt class="flex items-baseline gap-3 font-serif text-2xl leading-tight"><span
+                    class="font-mono text-xs text-signal">05</span>Upload validation</dt>
+                <dd class="mt-3 text-[0.95rem] leading-relaxed text-mute">Files are checked by MIME type and magic bytes
+                  before they are sent to Cloudinary, instead of trusting the client-supplied content type.</dd>
+              </div>
+              <div class="reveal border-t border-line py-6" style="--rd: 0.12s">
+                <dt class="flex items-baseline gap-3 font-serif text-2xl leading-tight"><span
+                    class="font-mono text-xs text-signal">06</span>Predictable configuration and errors</dt>
+                <dd class="mt-3 text-[0.95rem] leading-relaxed text-mute">Environment variables are validated with Zod
+                  at startup, schema changes are tracked with TypeORM migrations, and a global exception filter keeps
+                  stack traces out of production responses. Passwords are hashed with bcrypt.</dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+        <article aria-labelledby="clinic-system-title" class="border-t border-line-strong pt-10">
+          <div class="reveal ">
+            <div class="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
+              <div class="lg:col-span-5">
+                <div id="clinic-system-title">
+                  <header>
+                    <p class="eyebrow flex items-center gap-3"><span class="text-signal">02</span><span
+                        class="h-px w-8 bg-line-strong" aria-hidden="true"></span>Express · Redis · BullMQ</p>
+                    <h3 class="mt-5 font-serif text-[clamp(2.2rem,4.6vw,4rem)] leading-[1] tracking-[-0.02em]">Clinic
+                      Appointment System</h3>
+                    <p class="mt-2 text-mute">Booking API with payments and real-time updates</p>
+                  </header>
+                </div>
+                <p class="mt-8 leading-relaxed text-mute">A REST API for clinic appointment booking that prevents
+                  double-booking under concurrent requests using atomic Redis locks and Lua scripts. Background workers
+                  expire unpaid appointments, payments run through Paymob, and patients and doctors get live updates
+                  over Socket.IO.</p>
+                <div class="mt-8">
+                  <ul aria-label="Technologies"
+                    class="flex flex-wrap gap-x-3 gap-y-1 font-mono text-xs leading-6 text-mute">
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Node.js</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">TypeScript</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Express</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">MongoDB</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Redis</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">BullMQ</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Socket.IO</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Paymob</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Google OAuth</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Cloudinary</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Zod</li>
+                  </ul>
+                </div>
+                <div class="mt-8">
+                  <ul class="flex flex-wrap gap-3">
+                    <li><a href="https://github.com/Yousef-Shohber/Clinic-System" target="_blank"
+                        rel="noopener noreferrer"
+                        class="group inline-flex items-center gap-2 rounded-full border border-line-strong px-4 py-2 text-sm transition-colors hover:border-signal hover:text-signal"><svg
+                          viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="size-4">
+                          <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg>Source on GitHub<svg
+                          class="size-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <path d="M7 7h10v10" />
+                          <path d="M7 17 17 7" />
+                        </svg><span class="sr-only">for Clinic Appointment System (opens in a new tab)</span></a></li>
+                  </ul>
+                </div>
+                <dl class="mt-10 space-y-5 border-t border-line pt-6">
+                  <div>
+                    <dt class="eyebrow text-bone">Concurrency</dt>
+                    <dd class="mt-1.5 text-[0.95rem] leading-relaxed text-mute">The Redis lock handles contention at
+                      request time, and a unique compound index on doctor, date and start time exists as a
+                      database-level constraint.</dd>
+                  </div>
+                  <div>
+                    <dt class="eyebrow text-bone">Expiry</dt>
+                    <dd class="mt-1.5 text-[0.95rem] leading-relaxed text-mute">An expiration worker marks still-pending
+                      appointments as expired, refunds through Paymob if a payment was made, invalidates the cache and
+                      notifies the patient.</dd>
+                  </div>
+                  <div>
+                    <dt class="eyebrow text-bone">Webhook handling</dt>
+                    <dd class="mt-1.5 text-[0.95rem] leading-relaxed text-mute">The Paymob route uses a raw body parser
+                      mounted ahead of the JSON parser, and each callback is verified with an HMAC-SHA512 signature.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="eyebrow text-bone">Tokens and limits</dt>
+                    <dd class="mt-1.5 text-[0.95rem] leading-relaxed text-mute">JWT refresh-token rotation with reuse
+                      detection, Redis-backed rate limiting and idempotency keys.</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="lg:col-span-6 lg:col-start-7">
+                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+                  <div>
+                    <h4 class="eyebrow mb-4 text-signal">Booking flow</h4>
+                    <ol class="border-l border-line-strong">
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">01</span>
+                        <p class="text-[0.95rem] leading-snug">Patient picks a doctor, date and time</p>
+                      </li>
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">02</span>
+                        <p class="text-[0.95rem] leading-snug">Doctor verification and slot availability are checked</p>
+                      </li>
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">03</span>
+                        <p class="text-[0.95rem] leading-snug">A Redis lock is acquired atomically</p>
+                        <p class="mt-1 text-sm text-mute">Lua script, so two requests cannot reserve the same slot</p>
+                      </li>
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">04</span>
+                        <p class="text-[0.95rem] leading-snug">A pending appointment is created with a 15-minute expiry
+                        </p>
+                      </li>
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">05</span>
+                        <p class="text-[0.95rem] leading-snug">An expiry job is queued in BullMQ</p>
+                      </li>
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">06</span>
+                        <p class="text-[0.95rem] leading-snug">Cache is invalidated and a WebSocket event is emitted</p>
+                      </li>
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">07</span>
+                        <p class="text-[0.95rem] leading-snug">The lock is released</p>
+                      </li>
+                    </ol>
+                  </div>
+                  <div>
+                    <h4 class="eyebrow mb-4 text-signal">Payment flow</h4>
+                    <ol class="border-l border-line-strong">
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">01</span>
+                        <p class="text-[0.95rem] leading-snug">A payment intent is created for the appointment</p>
+                      </li>
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">02</span>
+                        <p class="text-[0.95rem] leading-snug">The patient is redirected to Paymob</p>
+                      </li>
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">03</span>
+                        <p class="text-[0.95rem] leading-snug">Paymob calls the webhook</p>
+                        <p class="mt-1 text-sm text-mute">Signature verified with HMAC-SHA512</p>
+                      </li>
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">04</span>
+                        <p class="text-[0.95rem] leading-snug">Appointment status is updated</p>
+                      </li>
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">05</span>
+                        <p class="text-[0.95rem] leading-snug">On success the expiry job is removed</p>
+                      </li>
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">06</span>
+                        <p class="text-[0.95rem] leading-snug">A notification is sent and an event is emitted</p>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="mt-8"><a href="images/clinic-architecture.webp" target="_blank" rel="noopener noreferrer"
+                    class="group block border border-line transition-colors hover:border-line-strong"><img
+                      src="images/clinic-architecture.webp"
+                      alt="Clinic Appointment Booking System architecture overview: Express middleware stack, service layer, MongoDB and Redis, BullMQ workers, Socket.IO events, Paymob payment flow and database ER diagram."
+                      width="1536" height="1024" loading="lazy" class="h-auto w-full"><span
+                      class="eyebrow flex items-center justify-between border-t border-line px-3 py-2.5 transition-colors group-hover:text-bone">Architecture
+                      overview<span class="inline-flex items-center gap-1">Full size <svg class="size-3.5"
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <path d="M7 7h10v10" />
+                          <path d="M7 17 17 7" />
+                        </svg><span class="sr-only">(opens in a new tab)</span></span></span></a></div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article aria-labelledby="event-booking-title" class="border-t border-line-strong pt-10">
+          <div class="reveal ">
+            <div class="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
+              <div class="lg:col-span-5">
+                <div id="event-booking-title">
+                  <header>
+                    <p class="eyebrow flex items-center gap-3"><span class="text-signal">03</span><span
+                        class="h-px w-8 bg-line-strong" aria-hidden="true"></span>Express · Redis · BullMQ</p>
+                    <h3 class="mt-5 font-serif text-[clamp(2.2rem,4.6vw,4rem)] leading-[1] tracking-[-0.02em]">Event
+                      Booking &amp; Queue Management</h3>
+                    <p class="mt-2 text-mute">Capacity-safe booking with a FIFO waitlist</p>
+                  </header>
+                </div>
+                <p class="mt-8 leading-relaxed text-mute">A booking API with real-time queue management. Slot capacity
+                  is decremented atomically in Redis, unconfirmed bookings expire through delayed BullMQ jobs, and a
+                  first-in-first-out waitlist promotes the next person automatically when a slot frees up.</p>
+                <div class="mt-8">
+                  <ul aria-label="Technologies"
+                    class="flex flex-wrap gap-x-3 gap-y-1 font-mono text-xs leading-6 text-mute">
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Node.js</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">TypeScript</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Express</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">MongoDB</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Redis</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">BullMQ</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Socket.IO</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">JWT</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Google OAuth</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Zod</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Pino</li>
+                  </ul>
+                </div>
+                <div class="mt-8">
+                  <ul class="flex flex-wrap gap-3">
+                    <li><a href="https://github.com/Yousef-Shohber/Booking-System" target="_blank"
+                        rel="noopener noreferrer"
+                        class="group inline-flex items-center gap-2 rounded-full border border-line-strong px-4 py-2 text-sm transition-colors hover:border-signal hover:text-signal"><svg
+                          viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="size-4">
+                          <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg>Source on GitHub<svg
+                          class="size-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <path d="M7 7h10v10" />
+                          <path d="M7 17 17 7" />
+                        </svg><span class="sr-only">for Event Booking &amp; Queue Management (opens in a new
+                          tab)</span></a></li>
+                  </ul>
+                </div>
+                <dl class="mt-10 space-y-5 border-t border-line pt-6">
+                  <div>
+                    <dt class="eyebrow text-bone">Concurrency</dt>
+                    <dd class="mt-1.5 text-[0.95rem] leading-relaxed text-mute">Capacity is decremented atomically by a
+                      Redis Lua script before the MongoDB transaction records the booking, so concurrent requests cannot
+                      oversell a slot.</dd>
+                  </div>
+                  <div>
+                    <dt class="eyebrow text-bone">Expiry</dt>
+                    <dd class="mt-1.5 text-[0.95rem] leading-relaxed text-mute">Each booking gets a delayed BullMQ job.
+                      If it is not confirmed in time, the booking is marked EXPIRED, the Redis counter is released and
+                      the next person in the queue is promoted.</dd>
+                  </div>
+                  <div>
+                    <dt class="eyebrow text-bone">Waitlist</dt>
+                    <dd class="mt-1.5 text-[0.95rem] leading-relaxed text-mute">Waiting users sit in a Redis sorted set
+                      scored by join time. Promoted users get a confirmation deadline enforced by a delayed job, and are
+                      notified over WebSocket.</dd>
+                  </div>
+                  <div>
+                    <dt class="eyebrow text-bone">Tokens and limits</dt>
+                    <dd class="mt-1.5 text-[0.95rem] leading-relaxed text-mute">JWT refresh-token rotation with reuse
+                      detection, Redis-backed rate limiting on sensitive routes, and idempotency for booking and queue
+                      actions.</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="lg:col-span-6 lg:col-start-7">
+                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+                  <div>
+                    <h4 class="eyebrow mb-4 text-signal">Booking flow</h4>
+                    <ol class="border-l border-line-strong">
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">01</span>
+                        <p class="text-[0.95rem] leading-snug">A user books a slot</p>
+                        <p class="mt-1 text-sm text-mute">POST /bookings</p>
+                      </li>
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">02</span>
+                        <p class="text-[0.95rem] leading-snug">A Redis Lua script decrements remaining capacity
+                          atomically</p>
+                      </li>
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">03</span>
+                        <p class="text-[0.95rem] leading-snug">A MongoDB transaction records the booking</p>
+                      </li>
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">04</span>
+                        <p class="text-[0.95rem] leading-snug">A delayed BullMQ job is scheduled to expire it</p>
+                      </li>
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">05</span>
+                        <p class="text-[0.95rem] leading-snug">If it expires: mark EXPIRED, release the Redis counter,
+                          promote the next person</p>
+                      </li>
+                    </ol>
+                  </div>
+                  <div>
+                    <h4 class="eyebrow mb-4 text-signal">Waitlist flow</h4>
+                    <ol class="border-l border-line-strong">
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">01</span>
+                        <p class="text-[0.95rem] leading-snug">The user joins the queue</p>
+                        <p class="mt-1 text-sm text-mute">Redis sorted set scored by join time</p>
+                      </li>
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">02</span>
+                        <p class="text-[0.95rem] leading-snug">When a slot frees up, the next entries are popped in FIFO
+                          order</p>
+                      </li>
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">03</span>
+                        <p class="text-[0.95rem] leading-snug">They are marked NOTIFIED with a confirmation deadline</p>
+                        <p class="mt-1 text-sm text-mute">Enforced by a delayed job and pushed over WebSocket</p>
+                      </li>
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">04</span>
+                        <p class="text-[0.95rem] leading-snug">The user confirms through the same atomic Lua decrement
+                        </p>
+                      </li>
+                      <li class="relative pb-5 pl-6 last:pb-0"><span
+                          class="absolute -left-[5px] top-[0.55rem] size-[9px] rounded-full border border-line-strong bg-ink"
+                          aria-hidden="true"></span><span class="font-mono text-xs text-faint">05</span>
+                        <p class="text-[0.95rem] leading-snug">If the deadline passes, the entry expires and the next
+                          person is promoted</p>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="mt-8"><a href="images/event-booking-architecture.webp" target="_blank"
+                    rel="noopener noreferrer"
+                    class="group block border border-line transition-colors hover:border-line-strong"><img
+                      src="images/event-booking-architecture.webp"
+                      alt="Event Booking System architecture overview: Express API server, MongoDB, Redis, BullMQ workers, Socket.IO with Redis adapter, booking flow, queue flow, API reference and WebSocket events."
+                      width="1536" height="1024" loading="lazy" class="h-auto w-full"><span
+                      class="eyebrow flex items-center justify-between border-t border-line px-3 py-2.5 transition-colors group-hover:text-bone">Architecture
+                      overview<span class="inline-flex items-center gap-1">Full size <svg class="size-3.5"
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <path d="M7 7h10v10" />
+                          <path d="M7 17 17 7" />
+                        </svg><span class="sr-only">(opens in a new tab)</span></span></span></a></div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <section aria-labelledby="more-work" class="border-t border-line-strong pt-10">
+          <div class="mb-8 flex items-baseline gap-4"><span class="eyebrow text-signal">04</span>
+            <h3 id="more-work" class="font-serif text-3xl tracking-[-0.01em] md:text-4xl">More work</h3>
+          </div>
+          <ul>
+            <li class="border-t border-line py-7 last:border-b">
+              <div class="reveal grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-8">
+                <h4 class="font-serif text-2xl leading-tight lg:col-span-3">Small E-commerce API</h4>
+                <p class="text-[0.95rem] leading-relaxed text-mute lg:col-span-5">NestJS backend covering authentication
+                  and authorization, database integration, validation, file uploads, email services, API documentation,
+                  unit tests and deployment.</p>
+                <div class="flex flex-col gap-4 lg:col-span-4">
+                  <ul aria-label="Technologies"
+                    class="flex flex-wrap gap-x-3 gap-y-1 font-mono text-xs leading-6 text-mute">
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">NestJS</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">TypeScript</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">PostgreSQL</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">TypeORM</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">JWT</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Google OAuth</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">RBAC</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Swagger</li>
+                  </ul>
+                  <ul class="flex flex-wrap gap-3">
+                    <li><a href="https://nest-course-one.vercel.app/swagger" target="_blank" rel="noopener noreferrer"
+                        class="group inline-flex items-center gap-2 rounded-full border border-line-strong px-4 py-2 text-sm transition-colors hover:border-signal hover:text-signal"><svg
+                          class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          aria-hidden="true">
+                          <path d="M12 7v14" />
+                          <path
+                            d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
+                        </svg>Docs<svg
+                          class="size-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <path d="M7 7h10v10" />
+                          <path d="M7 17 17 7" />
+                        </svg><span class="sr-only">for Small E-commerce API (opens in a new tab)</span></a></li>
+                    <li><a href="https://github.com/Yousef-Shohber/Nest-JS" target="_blank" rel="noopener noreferrer"
+                        class="group inline-flex items-center gap-2 rounded-full border border-line-strong px-4 py-2 text-sm transition-colors hover:border-signal hover:text-signal"><svg
+                          viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="size-4">
+                          <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg>GitHub<svg
+                          class="size-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <path d="M7 7h10v10" />
+                          <path d="M7 17 17 7" />
+                        </svg><span class="sr-only">for Small E-commerce API (opens in a new tab)</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="border-t border-line py-7 last:border-b">
+              <div class="reveal grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-8">
+                <h4 class="font-serif text-2xl leading-tight lg:col-span-3">FreelanceHub Platform API</h4>
+                <p class="text-[0.95rem] leading-relaxed text-mute lg:col-span-5">Freelance marketplace backend covering
+                  the hiring lifecycle from job posting to contract completion. Proposal acceptance is atomic
+                  (findOneAndUpdate) so concurrent acceptances cannot race, and email notifications run through BullMQ
+                  workers.</p>
+                <div class="flex flex-col gap-4 lg:col-span-4">
+                  <ul aria-label="Technologies"
+                    class="flex flex-wrap gap-x-3 gap-y-1 font-mono text-xs leading-6 text-mute">
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Node.js</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Express</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">MongoDB</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Redis</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">BullMQ</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">JWT</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Google OAuth</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">RBAC</li>
+                  </ul>
+                  <ul class="flex flex-wrap gap-3">
+                    <li><a href="https://github.com/Yousef-Shohber/FreelanceHub" target="_blank"
+                        rel="noopener noreferrer"
+                        class="group inline-flex items-center gap-2 rounded-full border border-line-strong px-4 py-2 text-sm transition-colors hover:border-signal hover:text-signal"><svg
+                          viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="size-4">
+                          <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg>GitHub<svg
+                          class="size-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <path d="M7 7h10v10" />
+                          <path d="M7 17 17 7" />
+                        </svg><span class="sr-only">for FreelanceHub Platform API (opens in a new tab)</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="border-t border-line py-7 last:border-b">
+              <div class="reveal grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-8">
+                <h4 class="font-serif text-2xl leading-tight lg:col-span-3">Restaurant Management API</h4>
+                <p class="text-[0.95rem] leading-relaxed text-mute lg:col-span-5">Menu, order and customer management
+                  with admin endpoints, built with MVC architecture and modular routing.</p>
+                <div class="flex flex-col gap-4 lg:col-span-4">
+                  <ul aria-label="Technologies"
+                    class="flex flex-wrap gap-x-3 gap-y-1 font-mono text-xs leading-6 text-mute">
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">Express</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">MongoDB</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">MVC</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">REST</li>
+                  </ul>
+                  <ul class="flex flex-wrap gap-3">
+                    <li><a href="https://github.com/Yousef-Shohber/Restaurant" target="_blank" rel="noopener noreferrer"
+                        class="group inline-flex items-center gap-2 rounded-full border border-line-strong px-4 py-2 text-sm transition-colors hover:border-signal hover:text-signal"><svg
+                          viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="size-4">
+                          <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg>GitHub<svg
+                          class="size-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <path d="M7 7h10v10" />
+                          <path d="M7 17 17 7" />
+                        </svg><span class="sr-only">for Restaurant Management API (opens in a new tab)</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="border-t border-line py-7 last:border-b">
+              <div class="reveal grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-8">
+                <h4 class="font-serif text-2xl leading-tight lg:col-span-3">Blog Application API</h4>
+                <p class="text-[0.95rem] leading-relaxed text-mute lg:col-span-5">RESTful blogging backend with JWT
+                  authentication, role-based authorization, post CRUD, nested comments and user profiles.</p>
+                <div class="flex flex-col gap-4 lg:col-span-4">
+                  <ul aria-label="Technologies"
+                    class="flex flex-wrap gap-x-3 gap-y-1 font-mono text-xs leading-6 text-mute">
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">MongoDB</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">JWT</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">OAuth2</li>
+                    <li class="after:ml-3 after:text-faint after:content-['/'] last:after:content-none">REST</li>
+                  </ul>
+                  <ul class="flex flex-wrap gap-3">
+                    <li><a href="https://github.com/Yousef-Shohber/Blog-App" target="_blank" rel="noopener noreferrer"
+                        class="group inline-flex items-center gap-2 rounded-full border border-line-strong px-4 py-2 text-sm transition-colors hover:border-signal hover:text-signal"><svg
+                          viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" class="size-4">
+                          <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg>GitHub<svg
+                          class="size-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <path d="M7 7h10v10" />
+                          <path d="M7 17 17 7" />
+                        </svg><span class="sr-only">for Blog Application API (opens in a new tab)</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
+    <section id="expertise" aria-labelledby="expertise-title" class="border-y border-line bg-ink-2">
+      <div class="mx-auto max-w-[1320px] px-5 py-24 sm:px-8 md:py-32 lg:px-12">
+        <div class="reveal mb-12 md:mb-16">
+          <div class="flex items-center gap-4"><span class="eyebrow text-signal">02</span><span
+              class="h-px flex-1 bg-line" aria-hidden="true"></span><span class="eyebrow">Technical expertise</span>
+          </div>
+          <div class="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-12">
+            <h2 id="expertise-title"
+              class="font-serif text-[clamp(2.4rem,5.4vw,4.6rem)] leading-[1] tracking-[-0.02em] lg:col-span-7">What I
+              use, <em class="text-signal">and where</em>.</h2>
+            <p class="max-w-md text-[0.95rem] leading-relaxed text-mute lg:col-span-4 lg:col-start-9 lg:self-end">
+              Grouped by the problem each tool solves, with the projects where it is used.</p>
+          </div>
+        </div>
+        <ul>
+          <li class="border-t border-line last:border-b">
+            <div class="reveal grid grid-cols-1 gap-5 py-8 lg:grid-cols-12 lg:gap-8">
+              <div class="lg:col-span-4">
+                <h3 class="font-serif text-3xl leading-tight">API design &amp; architecture</h3>
+                <p class="mt-2 max-w-sm text-sm leading-relaxed text-mute">Express with MVC, and NestJS with modules,
+                  dependency injection, guards, interceptors, pipes and filters.</p>
+              </div>
+              <ul class="flex flex-wrap content-start gap-x-2 gap-y-2 lg:col-span-6">
+                <li class="border border-line px-3 py-1.5 text-sm">Node.js</li>
+                <li class="border border-line px-3 py-1.5 text-sm">TypeScript</li>
+                <li class="border border-line px-3 py-1.5 text-sm">Express</li>
+                <li class="border border-line px-3 py-1.5 text-sm">NestJS</li>
+                <li class="border border-line px-3 py-1.5 text-sm">REST design: pagination, filtering, versioning</li>
+                <li class="border border-line px-3 py-1.5 text-sm">Swagger / OpenAPI</li>
+              </ul>
+              <p class="eyebrow lg:col-span-2 lg:text-right"><span class="block text-faint">Used in</span><span
+                  class="mt-1 block normal-case tracking-normal text-mute">PropFlow, E-commerce API, Clinic, Event
+                  Booking</span></p>
+            </div>
+          </li>
+          <li class="border-t border-line last:border-b">
+            <div class="reveal grid grid-cols-1 gap-5 py-8 lg:grid-cols-12 lg:gap-8">
+              <div class="lg:col-span-4">
+                <h3 class="font-serif text-3xl leading-tight">Authentication &amp; security</h3>
+                <p class="mt-2 max-w-sm text-sm leading-relaxed text-mute">Token handling, authorization boundaries and
+                  request hardening.</p>
+              </div>
+              <ul class="flex flex-wrap content-start gap-x-2 gap-y-2 lg:col-span-6">
+                <li class="border border-line px-3 py-1.5 text-sm">JWT access and refresh tokens</li>
+                <li class="border border-line px-3 py-1.5 text-sm">Refresh-token rotation with reuse detection</li>
+                <li class="border border-line px-3 py-1.5 text-sm">Google OAuth 2.0</li>
+                <li class="border border-line px-3 py-1.5 text-sm">Email OTP</li>
+                <li class="border border-line px-3 py-1.5 text-sm">bcrypt</li>
+                <li class="border border-line px-3 py-1.5 text-sm">RBAC and resource-level authorization</li>
+                <li class="border border-line px-3 py-1.5 text-sm">Helmet, CORS, rate limiting</li>
+                <li class="border border-line px-3 py-1.5 text-sm">XSS and CSRF protection</li>
+                <li class="border border-line px-3 py-1.5 text-sm">Idempotency keys</li>
+                <li class="border border-line px-3 py-1.5 text-sm">Zod validation</li>
+              </ul>
+              <p class="eyebrow lg:col-span-2 lg:text-right"><span class="block text-faint">Used in</span><span
+                  class="mt-1 block normal-case tracking-normal text-mute">PropFlow, Clinic, Event Booking,
+                  FreelanceHub</span></p>
+            </div>
+          </li>
+          <li class="border-t border-line last:border-b">
+            <div class="reveal grid grid-cols-1 gap-5 py-8 lg:grid-cols-12 lg:gap-8">
+              <div class="lg:col-span-4">
+                <h3 class="font-serif text-3xl leading-tight">Data layer</h3>
+                <p class="mt-2 max-w-sm text-sm leading-relaxed text-mute">Relational and document stores, with Redis in
+                  front where it earns its place.</p>
+              </div>
+              <ul class="flex flex-wrap content-start gap-x-2 gap-y-2 lg:col-span-6">
+                <li class="border border-line px-3 py-1.5 text-sm">PostgreSQL</li>
+                <li class="border border-line px-3 py-1.5 text-sm">TypeORM and migrations</li>
+                <li class="border border-line px-3 py-1.5 text-sm">MongoDB and Mongoose</li>
+                <li class="border border-line px-3 py-1.5 text-sm">Transactions</li>
+                <li class="border border-line px-3 py-1.5 text-sm">TTL indexes</li>
+                <li class="border border-line px-3 py-1.5 text-sm">Redis caching</li>
+              </ul>
+              <p class="eyebrow lg:col-span-2 lg:text-right"><span class="block text-faint">Used in</span><span
+                  class="mt-1 block normal-case tracking-normal text-mute">PropFlow, Clinic, Event Booking</span></p>
+            </div>
+          </li>
+          <li class="border-t border-line last:border-b">
+            <div class="reveal grid grid-cols-1 gap-5 py-8 lg:grid-cols-12 lg:gap-8">
+              <div class="lg:col-span-4">
+                <h3 class="font-serif text-3xl leading-tight">Concurrency, queues &amp; real-time</h3>
+                <p class="mt-2 max-w-sm text-sm leading-relaxed text-mute">Keeping state correct when many requests
+                  touch the same resource.</p>
+              </div>
+              <ul class="flex flex-wrap content-start gap-x-2 gap-y-2 lg:col-span-6">
+                <li class="border border-line px-3 py-1.5 text-sm">Redis Lua scripts for atomic operations</li>
+                <li class="border border-line px-3 py-1.5 text-sm">Distributed locking</li>
+                <li class="border border-line px-3 py-1.5 text-sm">BullMQ workers and delayed jobs</li>
+                <li class="border border-line px-3 py-1.5 text-sm">FIFO waitlists on Redis sorted sets</li>
+                <li class="border border-line px-3 py-1.5 text-sm">Socket.IO with the Redis adapter</li>
+                <li class="border border-line px-3 py-1.5 text-sm">Redis Pub/Sub</li>
+              </ul>
+              <p class="eyebrow lg:col-span-2 lg:text-right"><span class="block text-faint">Used in</span><span
+                  class="mt-1 block normal-case tracking-normal text-mute">Clinic, Event Booking, FreelanceHub</span>
+              </p>
+            </div>
+          </li>
+          <li class="border-t border-line last:border-b">
+            <div class="reveal grid grid-cols-1 gap-5 py-8 lg:grid-cols-12 lg:gap-8">
+              <div class="lg:col-span-4">
+                <h3 class="font-serif text-3xl leading-tight">Integrations &amp; delivery</h3>
+                <p class="mt-2 max-w-sm text-sm leading-relaxed text-mute">Third-party services, uploads, logging and
+                  operational basics.</p>
+              </div>
+              <ul class="flex flex-wrap content-start gap-x-2 gap-y-2 lg:col-span-6">
+                <li class="border border-line px-3 py-1.5 text-sm">Paymob: HMAC-SHA512 webhooks, iframe flow, refunds
+                </li>
+                <li class="border border-line px-3 py-1.5 text-sm">Cloudinary and Multer</li>
+                <li class="border border-line px-3 py-1.5 text-sm">Nodemailer</li>
+                <li class="border border-line px-3 py-1.5 text-sm">Pino, Winston, Morgan</li>
+                <li class="border border-line px-3 py-1.5 text-sm">Health checks and graceful shutdown</li>
+                <li class="border border-line px-3 py-1.5 text-sm">Git, GitHub, Postman</li>
+              </ul>
+              <p class="eyebrow lg:col-span-2 lg:text-right"><span class="block text-faint">Used in</span><span
+                  class="mt-1 block normal-case tracking-normal text-mute">Clinic, PropFlow</span></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="about" aria-labelledby="about-title"
+      class="mx-auto max-w-[1320px] px-5 py-24 sm:px-8 md:py-32 lg:px-12">
+      <div class="reveal mb-12 md:mb-16">
+        <div class="flex items-center gap-4"><span class="eyebrow text-signal">03</span><span
+            class="h-px flex-1 bg-line" aria-hidden="true"></span><span class="eyebrow">About</span></div>
+        <div class="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-12">
+          <h2 id="about-title"
+            class="font-serif text-[clamp(2.4rem,5.4vw,4.6rem)] leading-[1] tracking-[-0.02em] lg:col-span-7">Interested
+            in the <em class="text-signal">failure cases</em>.</h2>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-12">
+        <div class="reveal lg:col-span-6">
+          <p class="font-serif text-[clamp(1.6rem,2.6vw,2.3rem)] leading-[1.2] tracking-[-0.01em]">I enjoy the part of
+            backend work that users never see: making sure two requests can’t book the same slot, a stolen refresh token
+            can’t be replayed, and a failed payment doesn’t leave a half-finished record behind.</p>
+          <div class="mt-10 space-y-5 text-[1.02rem] leading-relaxed text-mute">
+            <p>I’m a fourth-year Information Technology student at Zagazig University. I started with JavaScript and the
+              MEAN stack, then narrowed in on the server side, where the interesting problems are correctness, security
+              and what happens when things fail.</p>
+            <p>My early projects were Express APIs built around CRUD, authentication and role-based access. The later
+              ones push into concurrency and background work: Redis Lua scripts for atomic reservations, BullMQ for
+              expiry and notifications, Socket.IO for live updates. More recently I’ve moved to NestJS and PostgreSQL,
+              and PropFlow is where I’m applying that structure end to end.</p>
+          </div>
+          <dl class="mt-10 border-t border-line">
+            <div class="grid grid-cols-1 gap-1 border-b border-line py-4 sm:grid-cols-[8rem_1fr] sm:gap-6">
+              <dt class="eyebrow">Education</dt>
+              <dd class="text-sm">B.Sc. Information Technology, Zagazig University (expected 2027)</dd>
+            </div>
+            <div class="grid grid-cols-1 gap-1 border-b border-line py-4 sm:grid-cols-[8rem_1fr] sm:gap-6">
+              <dt class="eyebrow">Languages</dt>
+              <dd class="text-sm">Arabic (native), English (intermediate, technical)</dd>
+            </div>
+            <div class="grid grid-cols-1 gap-1 border-b border-line py-4 sm:grid-cols-[8rem_1fr] sm:gap-6">
+              <dt class="eyebrow">Based in</dt>
+              <dd class="text-sm">Cairo, Egypt</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="reveal lg:col-span-5 lg:col-start-8" style="--rd: 0.08s">
+          <h3 class="eyebrow mb-6">How my work progressed</h3>
+          <ol class="border-l border-line-strong">
+            <li class="relative pb-8 pl-7 last:pb-0"><span
+                class="absolute -left-[5px] top-2 size-[9px] rounded-full bg-signal" aria-hidden="true"></span>
+              <p class="font-mono text-xs text-faint">01</p>
+              <p class="font-serif text-2xl leading-tight">Foundations</p>
+              <p class="mt-1.5 text-[0.95rem] leading-relaxed text-mute">JavaScript, TypeScript and the MEAN stack with
+                a backend focus.</p>
+            </li>
+            <li class="relative pb-8 pl-7 last:pb-0"><span
+                class="absolute -left-[5px] top-2 size-[9px] rounded-full bg-signal" aria-hidden="true"></span>
+              <p class="font-mono text-xs text-faint">02</p>
+              <p class="font-serif text-2xl leading-tight">Express APIs</p>
+              <p class="mt-1.5 text-[0.95rem] leading-relaxed text-mute">Restaurant, Blog and FreelanceHub: REST design,
+                JWT auth, RBAC.</p>
+            </li>
+            <li class="relative pb-8 pl-7 last:pb-0"><span
+                class="absolute -left-[5px] top-2 size-[9px] rounded-full bg-signal" aria-hidden="true"></span>
+              <p class="font-mono text-xs text-faint">03</p>
+              <p class="font-serif text-2xl leading-tight">Concurrency &amp; real-time</p>
+              <p class="mt-1.5 text-[0.95rem] leading-relaxed text-mute">Event Booking and Clinic: atomic Redis scripts,
+                BullMQ, Socket.IO, Paymob.</p>
+            </li>
+            <li class="relative pb-8 pl-7 last:pb-0"><span
+                class="absolute -left-[5px] top-2 size-[9px] rounded-full bg-signal" aria-hidden="true"></span>
+              <p class="font-mono text-xs text-faint">04</p>
+              <p class="font-serif text-2xl leading-tight">NestJS &amp; PostgreSQL</p>
+              <p class="mt-1.5 text-[0.95rem] leading-relaxed text-mute">E-commerce API and PropFlow: modules, DI,
+                guards, TypeORM migrations.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <section id="learning" aria-labelledby="learning-title" class="border-y border-line bg-ink-2">
+      <div class="mx-auto max-w-[1320px] px-5 py-24 sm:px-8 md:py-32 lg:px-12">
+        <div class="reveal mb-12 md:mb-16">
+          <div class="flex items-center gap-4"><span class="eyebrow text-signal">04</span><span
+              class="h-px flex-1 bg-line" aria-hidden="true"></span><span class="eyebrow">Learning &amp; growth</span>
+          </div>
+          <div class="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-12">
+            <h2 id="learning-title"
+              class="font-serif text-[clamp(2.4rem,5.4vw,4.6rem)] leading-[1] tracking-[-0.02em] lg:col-span-7">The
+              curriculum <em class="text-signal">behind</em> the projects.</h2>
+            <p class="max-w-md text-[0.95rem] leading-relaxed text-mute lg:col-span-4 lg:col-start-9 lg:self-end">
+              Coursework and self-study, listed separately on purpose. This is what I have studied, not professional
+              experience; the work above shows what I have built with it.</p>
+          </div>
+        </div>
+        <ol>
+          <li class="border-t border-line">
+            <div class="reveal grid grid-cols-1 gap-4 py-8 lg:grid-cols-12 lg:gap-8">
+              <div class="flex items-baseline gap-4 lg:col-span-4"><span class="font-mono text-xs text-signal">01</span>
+                <h3 class="font-serif text-3xl leading-tight">Web foundations</h3>
+              </div>
+              <p class="text-sm leading-relaxed text-mute lg:col-span-8">HTML5, CSS3 and responsive design · modern
+                JavaScript (promises, async/await) · DOM and events · HTTP: methods, headers, status codes, cookies ·
+                TypeScript</p>
+            </div>
+          </li>
+          <li class="border-t border-line">
+            <div class="reveal grid grid-cols-1 gap-4 py-8 lg:grid-cols-12 lg:gap-8">
+              <div class="flex items-baseline gap-4 lg:col-span-4"><span class="font-mono text-xs text-signal">02</span>
+                <h3 class="font-serif text-3xl leading-tight">Node.js &amp; Express</h3>
+              </div>
+              <p class="text-sm leading-relaxed text-mute lg:col-span-8">Event loop and non-blocking I/O · routing,
+                middleware and error handling · REST design · Zod and Joi validation · cookies, JWT, OAuth2 and session
+                management · CORS, Helmet and rate-limiting strategies · Multer and Cloudinary · Nodemailer and Resend ·
+                Morgan, Winston and Pino · idempotency · Redis caching and compression · BullMQ · health checks and
+                graceful shutdown · Swagger / OpenAPI</p>
+            </div>
+          </li>
+          <li class="border-t border-line">
+            <div class="reveal grid grid-cols-1 gap-4 py-8 lg:grid-cols-12 lg:gap-8">
+              <div class="flex items-baseline gap-4 lg:col-span-4"><span class="font-mono text-xs text-signal">03</span>
+                <h3 class="font-serif text-3xl leading-tight">Databases</h3>
+              </div>
+              <p class="text-sm leading-relaxed text-mute lg:col-span-8">PostgreSQL, SQL, joins, indexing and
+                transactions · schema design and normalization · migrations · connection pooling with pg-pool · MongoDB,
+                aggregation pipeline and Mongoose · Redis fundamentals · query and index optimization</p>
+            </div>
+          </li>
+          <li class="border-t border-line">
+            <div class="reveal grid grid-cols-1 gap-4 py-8 lg:grid-cols-12 lg:gap-8">
+              <div class="flex items-baseline gap-4 lg:col-span-4"><span class="font-mono text-xs text-signal">04</span>
+                <h3 class="font-serif text-3xl leading-tight">NestJS</h3>
+              </div>
+              <div class="grid grid-cols-1 gap-6 md:grid-cols-3 lg:col-span-8">
+                <div>
+                  <p class="eyebrow mb-2">Phase 1 · Architecture &amp; core concepts</p>
+                  <p class="text-sm leading-relaxed text-mute">NestJS versus Express · modules, controllers, services ·
+                    dependency injection · decorators and metadata · Nest CLI · request lifecycle: middleware, guards,
+                    pipes, interceptors, filters.</p>
+                </div>
+                <div>
+                  <p class="eyebrow mb-2">Phase 2 · Data &amp; authentication</p>
+                  <p class="text-sm leading-relaxed text-mute">TypeORM with PostgreSQL and the repository pattern ·
+                    Prisma as an alternative · transactions · Passport.js with @nestjs/jwt · access and refresh token
+                    strategies · role-based guards.</p>
+                </div>
+                <div>
+                  <p class="eyebrow mb-2">Phase 3 · Advanced patterns &amp; production</p>
+                  <p class="text-sm leading-relaxed text-mute">@nestjs/config with Zod validation · BullMQ queues ·
+                    Redis caching · WebSockets with Socket.IO gateways · Multer and Cloudinary uploads · @nestjs/swagger
+                    · @nestjs/terminus health checks.</p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+        <div class="reveal mt-16 grid grid-cols-1 gap-6 border-t border-line-strong pt-8 lg:grid-cols-12 lg:gap-8">
+          <h3 class="eyebrow lg:col-span-4">Training programs</h3>
+          <ul class="lg:col-span-8">
+            <li
+              class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b border-line py-3 first:pt-0">
+              <span>MEAN Stack Development <span class="text-mute">· National Telecommunication Institute (NTI),
+                  Zagazig</span></span><span class="font-mono text-xs text-mute">210 hours</span></li>
+            <li
+              class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b border-line py-3 first:pt-0">
+              <span>The Complete JavaScript Course 2025 <span class="text-mute">· Udemy</span></span><span
+                class="font-mono text-xs text-mute">71 hours</span></li>
+            <li
+              class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b border-line py-3 first:pt-0">
+              <span>Modern JavaScript &amp; Backend Node.js <span class="text-mute">· Manara</span></span><span
+                class="font-mono text-xs text-mute">40 hours</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="contact" aria-labelledby="contact-title"
+      class="mx-auto max-w-[1320px] px-5 py-24 sm:px-8 md:py-32 lg:px-12">
+      <div class="reveal mb-12 md:mb-16">
+        <div class="flex items-center gap-4"><span class="eyebrow text-signal">05</span><span
+            class="h-px flex-1 bg-line" aria-hidden="true"></span><span class="eyebrow">Contact</span></div>
+        <div class="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-12">
+          <h2 id="contact-title"
+            class="font-serif text-[clamp(2.4rem,5.4vw,4.6rem)] leading-[1] tracking-[-0.02em] lg:col-span-7">Let’s talk
+            about <em class="text-signal">your backend</em>.</h2>
+          <p class="max-w-md text-[0.95rem] leading-relaxed text-mute lg:col-span-4 lg:col-start-9 lg:self-end">Open to
+            backend roles, internships and freelance projects. Email is the quickest way to reach me.</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-12">
+        <div class="reveal lg:col-span-7"><a href="mailto:yousefshohber@gmail.com?subject=Hello%20Yousef"
+            class="group inline-flex items-center gap-4 break-all font-serif text-[clamp(1.7rem,4.4vw,3.6rem)] leading-tight tracking-[-0.01em] transition-colors hover:text-signal"><svg
+              class="size-[0.8em] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+            </svg>yousefshohber@gmail.com</a>
+          <div class="mt-6 flex flex-wrap items-center gap-3"><button type="button" id="copy-email"
+              data-email="yousefshohber@gmail.com"
+              class="inline-flex items-center gap-2 rounded-full border border-line-strong px-4 py-2 text-sm transition-colors hover:border-bone"><span
+                data-copy-icon><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+                  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+                </svg></span><span data-check-icon hidden><svg class="size-4 text-signal"
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg></span>Copy email</button><span id="copy-status" role="status" aria-live="polite"
+              class="eyebrow min-w-24"></span></div>
+        </div>
+        <div class="reveal lg:col-span-4 lg:col-start-9" style="--rd: 0.08s">
+          <ul class="border-t border-line">
+            <li class="border-b border-line"><a href="https://www.linkedin.com/in/yousef-shohber-389280314/"
+                target="_blank" rel="noopener noreferrer"
+                class="group flex items-center gap-4 py-4 transition-colors hover:text-signal"><svg viewBox="0 0 24 24"
+                  fill="currentColor" aria-hidden="true" focusable="false"
+                  class="size-5 shrink-0 text-mute transition-colors group-hover:text-signal">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg><span class="flex-1"><span class="eyebrow block">LinkedIn</span><span class="text-sm">Yousef
+                    Shohber</span></span><svg
+                  class="size-4 text-faint transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 7h10v10" />
+                  <path d="M7 17 17 7" />
+                </svg><span class="sr-only">(opens in a new tab)</span></a></li>
+            <li class="border-b border-line"><a href="https://github.com/Yousef-Shohber" target="_blank"
+                rel="noopener noreferrer"
+                class="group flex items-center gap-4 py-4 transition-colors hover:text-signal"><svg viewBox="0 0 24 24"
+                  fill="currentColor" aria-hidden="true" focusable="false"
+                  class="size-5 shrink-0 text-mute transition-colors group-hover:text-signal">
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                </svg><span class="flex-1"><span class="eyebrow block">GitHub</span><span
+                    class="text-sm">Yousef-Shohber</span></span><svg
+                  class="size-4 text-faint transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 7h10v10" />
+                  <path d="M7 17 17 7" />
+                </svg><span class="sr-only">(opens in a new tab)</span></a></li>
+            <li class="border-b border-line"><a href="https://wa.me/201501580498" target="_blank"
+                rel="noopener noreferrer"
+                class="group flex items-center gap-4 py-4 transition-colors hover:text-signal"><svg viewBox="0 0 24 24"
+                  fill="currentColor" aria-hidden="true" focusable="false"
+                  class="size-5 shrink-0 text-mute transition-colors group-hover:text-signal">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                </svg><span class="flex-1"><span class="eyebrow block">WhatsApp</span><span class="text-sm">+20 150 158
+                    0498</span></span><svg
+                  class="size-4 text-faint transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 7h10v10" />
+                  <path d="M7 17 17 7" />
+                </svg><span class="sr-only">(opens in a new tab)</span></a></li>
+            <li class="border-b border-line"><a href="https://www.facebook.com/yousef.m.abdelrahman" target="_blank"
+                rel="noopener noreferrer"
+                class="group flex items-center gap-4 py-4 transition-colors hover:text-signal"><svg viewBox="0 0 24 24"
+                  fill="currentColor" aria-hidden="true" focusable="false"
+                  class="size-5 shrink-0 text-mute transition-colors group-hover:text-signal">
+                  <path
+                    d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
+                </svg><span class="flex-1"><span class="eyebrow block">Facebook</span><span class="text-sm">Yousef
+                    Shohber</span></span><svg
+                  class="size-4 text-faint transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 7h10v10" />
+                  <path d="M7 17 17 7" />
+                </svg><span class="sr-only">(opens in a new tab)</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="border-t border-line">
+    <div
+      class="mx-auto flex max-w-[1320px] flex-col gap-4 px-5 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
+      <p class="eyebrow leading-relaxed">© <span id="year">2026</span> Yousef Shohber · Backend Developer · Cairo, Egypt
+      </p><a href="#top"
+        class="eyebrow inline-flex w-fit shrink-0 items-center gap-2 self-end transition-colors hover:text-bone focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bone sm:self-auto">Back
+        to top <svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m5 12 7-7 7 7" />
+          <path d="M12 19V5" />
+        </svg></a>
+    </div>
+  </footer>
+  <script
+    type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Yousef Shohber","jobTitle":"Backend Developer","url":"https://sonic-portfolio-henna.vercel.app","email":"mailto:yousefshohber@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Cairo","addressCountry":"EG"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Zagazig University"},"knowsAbout":["Node.js","NestJS","TypeScript","PostgreSQL","MongoDB","Redis","REST API design"],"sameAs":["https://github.com/Yousef-Shohber","https://www.linkedin.com/in/yousef-shohber-389280314/"]}</script>
+  <script src="script.js" defer></script>
+</body>
+
+</html>
