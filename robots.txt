@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sonic-portfolio-henna.vercel.app/sitemap.xml
+Sitemap: https://yousef-shohber-portfolio.vercel.app/sitemap.xml
